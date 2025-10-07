@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: puppeteer-screenshot-proxy
+    env: node
+    plan: free
+    branch: main
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    autoDeploy: true
+    envVars:
+      - key: BASIC_USER
+        sync: false
+      - key: BASIC_PASS
+        sync: false
